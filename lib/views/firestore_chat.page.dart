@@ -30,6 +30,12 @@ class FirestoreChatPage extends StatelessWidget {
                 onSend: vm.sendMessage,
                 messages: vm.messages,
                 inputOptions: InputOptions(
+                  sendButtonBuilder: (send) {
+                    return IconButton(
+                      icon: Icon(Icons.send,color: Color(0xFFFB923C)),
+                      onPressed: send,
+                    );
+                  },
                   inputTextStyle: TextStyle(
                     color: Theme.of(context).brightness != Brightness.dark
                         ? Colors.white
